@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HSC Chemistry 1st Paper</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:linear-gradient(135deg,#e8f5e9,#f5fff8);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+}
+
+.container{
+    width:100%;
+    max-width:900px;
+    background:white;
+    border-radius:20px;
+    padding:45px;
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+    text-align:center;
+}
+
+h1{
+    font-size:2.4rem;
+    color:#1b5e20;
+    margin-bottom:10px;
+}
+
+p{
+    color:#555;
+    margin-bottom:40px;
+    font-size:1.05rem;
+}
+
+.chapter-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:22px;
+}
+
+.chapter-btn{
+    text-decoration:none;
+    background:linear-gradient(135deg,#43a047,#2e7d32);
+    color:white;
+    padding:22px;
+    border-radius:15px;
+    font-size:1.1rem;
+    font-weight:600;
+    transition:.3s;
+    box-shadow:0 8px 18px rgba(67,160,71,.25);
+}
+
+.chapter-btn:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 28px rgba(67,160,71,.35);
+}
+
+.chapter-btn span{
+    display:block;
+    font-size:.9rem;
+    font-weight:400;
+    opacity:.9;
+    margin-top:6px;
+}
+
+@media(max-width:600px){
+    .container{
+        padding:30px 20px;
+    }
+
+    h1{
+        font-size:2rem;
+    }
+
+    .chapter-btn{
+        padding:18px;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>HSC Chemistry 1st Paper</h1>
+
+    <p>Select a chapter to start practicing.</p>
+
+    <div class="chapter-grid">
+
+        <a href="Safe Use of Laboratory/index.html" class="chapter-btn">
+            অধ্যায় ১
+            <span>ল্যাবরেটরির নিরাপদ ব্যবহার</span>
+        </a>
+
+        <a href="Qualitative Chemistry/index.html" class="chapter-btn">
+            অধ্যায় ২
+            <span>গুনগত রসায়ন</span>
+        </a>
+
+        <a href="chapter3.html" class="chapter-btn">
+            অধ্যায় ৩
+            <span>মৌলের পর্যায়বৃত্ত ধর্ম ও রাসায়নিক বন্ধন</span>
+        </a>
+
+        <a href="Chemical Changes/index.html" class="chapter-btn">
+            অধ্যায় ৪
+            <span>রাসায়নিক পরিবর্তন</span>
+        </a>
+
+        <a href="Application Oriented Chemistry/index.html" class="chapter-btn">
+            অধ্যায় ৫
+            <span>কর্মমুখী রসায়ন</span>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
