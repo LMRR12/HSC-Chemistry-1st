@@ -79,6 +79,143 @@ p{
     margin-top:6px;
 }
 
+/* ===========================
+   Animated Chemistry Background
+=========================== */
+
+body{
+    overflow:hidden;
+}
+
+.atoms{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:0;
+}
+
+.container{
+    position:relative;
+    z-index:2;
+}
+
+/* Atom */
+
+.atom{
+    position:absolute;
+    width:65px;
+    height:65px;
+    border:2px solid rgba(76,175,80,.15);
+    border-radius:50%;
+    animation:
+        float linear infinite,
+        spin 8s linear infinite;
+}
+
+/* nucleus */
+
+.atom::before{
+    content:"";
+    position:absolute;
+    width:10px;
+    height:10px;
+    background:#43a047;
+    border-radius:50%;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+
+/* electron */
+
+.atom::after{
+    content:"";
+    position:absolute;
+    width:8px;
+    height:8px;
+    background:#66bb6a;
+    border-radius:50%;
+    top:-4px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+/* Different positions */
+
+.atom:nth-child(1){
+    left:5%;
+    top:80%;
+    animation-duration:24s,8s;
+}
+
+.atom:nth-child(2){
+    left:20%;
+    top:15%;
+    animation-duration:28s,10s;
+    transform:scale(.8);
+}
+
+.atom:nth-child(3){
+    left:40%;
+    top:70%;
+    animation-duration:32s,9s;
+}
+
+.atom:nth-child(4){
+    left:65%;
+    top:25%;
+    animation-duration:26s,7s;
+}
+
+.atom:nth-child(5){
+    left:82%;
+    top:75%;
+    animation-duration:30s,11s;
+    transform:scale(1.2);
+}
+
+.atom:nth-child(6){
+    left:92%;
+    top:18%;
+    animation-duration:34s,9s;
+}
+
+.atom:nth-child(7){
+    left:50%;
+    top:5%;
+    animation-duration:27s,8s;
+}
+
+.atom:nth-child(8){
+    left:12%;
+    top:45%;
+    animation-duration:29s,10s;
+}
+
+/* Animations */
+
+@keyframes spin{
+    from{
+        rotate:0deg;
+    }
+    to{
+        rotate:360deg;
+    }
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-90px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+
 @media(max-width:600px){
     .container{
         padding:30px 20px;
@@ -96,6 +233,17 @@ p{
 
 </head>
 <body>
+
+    <div class="atoms">
+    <span class="atom"></span>
+    <span class="atom"></span>
+    <span class="atom"></span>
+    <span class="atom"></span>
+    <span class="atom"></span>
+    <span class="atom"></span>
+    <span class="atom"></span>
+    <span class="atom"></span>
+</div>
 
 <div class="container">
 
