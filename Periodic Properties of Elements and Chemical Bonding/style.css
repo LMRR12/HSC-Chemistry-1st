@@ -185,6 +185,31 @@ header p{
     font-size:75%;
 }
 
+.comparison-table{
+    width:100%;
+    border-collapse:collapse;
+    margin:16px 0;
+    font-size:15px;
+}
+
+.comparison-table th,
+.comparison-table td{
+    border:1px solid #cfd8dc;
+    padding:10px 12px;
+    vertical-align:top;
+    text-align:left;
+    line-height:1.6;
+}
+
+.comparison-table th{
+    background:#f5f7fa;
+    font-weight:700;
+}
+
+.comparison-table tr:nth-child(even){
+    background:#fafafa;
+}
+
 /* ===========================
    Animation
 =========================== */
